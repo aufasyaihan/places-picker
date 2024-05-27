@@ -11,7 +11,7 @@ export default function DeleteConfirmation({ onConfirm, onCancel }) {
       console.log("Timer Stopped");
       clearTimeout(timer);
     };
-  }, []);
+  }, [onConfirm]); // if u use function as depedencies you need to use useCallback
   return (
     <div id="delete-confirmation">
       <h2>Are you sure?</h2>
